@@ -25,5 +25,5 @@ defmodule SentenceTest do
     assert Sentence.bored?("aaaahhhhhhhh.")
     refute Sentence.bored?("AAAAaaaahhhhhhhhHHHH.")
   end
-
+  
 end

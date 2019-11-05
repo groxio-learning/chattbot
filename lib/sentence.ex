@@ -1,21 +1,24 @@
 defmodule Chattbot.Sentence do
   
   def question?(message) do
-    message
-    |> String.trim
-    |> String.ends_with?("?")
+    
+    ends_with?(message, "?")
   end
   
   def pause?(message) do
     message
-    |> String.trim
-    |> String.ends_with?(".")
+    |> ends_with?(".")
   end
   
   def excited?(message) do
     message
+    |> ends_with?("!")
+  end
+  
+  defp ends_with?(message, punctuation) do
+    message
     |> String.trim
-    |> String.ends_with?("!")
+    |> String.ends_with?(punctuation) 
   end
   
   def yelling?(message) do
