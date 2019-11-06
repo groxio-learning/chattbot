@@ -26,4 +26,15 @@ defmodule SentenceTest do
     refute Sentence.bored?("AAAAaaaahhhhhhhhHHHH.")
   end
   
+  test "A chattbot has a personality" do
+    sentence = "HI! MY NAME IS JOE AND I WORK IN A COOKIE FACTORY!!!?!"
+    attitude = Sentence.attitude(sentence)
+    
+    assert attitude.yelling
+    assert attitude.excited
+    refute attitude.bored
+    refute attitude.question
+    refute attitude.pause
+  end
+  
 end
