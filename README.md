@@ -6,6 +6,8 @@ This is a several-week curriculum for teaching Elixir to new students. This is w
 
 - Learn that Elixir code is primarily modules with functions inside
 - Those functions can be tested with software tests. 
+- If there's time, refactoring is taking code that works and turning it into better code that works.
+- Tests are a safety net. 
 
 ## Vocabulary
 
