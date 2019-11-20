@@ -8,8 +8,8 @@ defmodule SentenceTest do
     refute Sentence.question?("You are how.")
   end
   
-  test "pause statement ends in ." do
-    assert Sentence.pause?("Do you like cheese.")
+  test "melancholy statement ends in ." do
+    assert Sentence.melancholy?("Do you like cheese.")
   end
   
   test "excited statement ends in !" do
@@ -34,7 +34,7 @@ defmodule SentenceTest do
     assert attitude.excited
     refute attitude.bored
     refute attitude.question
-    refute attitude.pause
+    refute attitude.melancholy
   end
   
 end

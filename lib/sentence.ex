@@ -3,7 +3,7 @@ defmodule Chattbot.Sentence do
   def attitude(message) do
     %{
       question: question?(message),
-      pause: pause?(message),
+      melancholy: melancholy?(message),
       excited: excited?(message),
       bored: bored?(message),
       yelling: yelling?(message),
@@ -14,7 +14,7 @@ defmodule Chattbot.Sentence do
     ends_with?(message, "?")
   end
   
-  def pause?(message) do
+  def melancholy?(message) do
     message
     |> ends_with?(".")
   end
